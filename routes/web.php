@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Severity;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('adminlte');
 });
+
+Route::get("/severities", function(){
+    return view('severities', [
+        'severities' => Severity::all()
+    ]);
+});
+
+Route::post('/darkmode/toggle', [DarkModeController::class, 'toggle'])
+    ->name('darkmode.toggle');
+
+//Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

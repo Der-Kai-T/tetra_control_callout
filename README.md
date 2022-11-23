@@ -13,4 +13,7 @@ Inside the web-app you'll mangage all informations (Users, ISSIs, GSSIs, Subs, S
 You can control which user will be able to use which Settings (ISSI / GSSI / SUB / Severity). Every action is recored in the log available to all admin-users.
 
 ## Current State
-Currently this is Version 0.0 containing the Laravel sceleton application whithout any function.
+Currently this is Version 0.01 containing the Laravel sceleton application whithout any function.
+
+## Notes
+- V 0.01 added AdminLTE3 Template
