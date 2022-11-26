@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TME extends Model
+class OrgaGroup extends Model
 {
     use HasFactory;
     public $guarded = [];
 
-    public function orga_groups(){
-        return $this->belongsTo(OrgaGroup::class);
+    public function tmes(){
+        return $this->hasMany(TME::class, 'orga_groups_id');
     }
 }

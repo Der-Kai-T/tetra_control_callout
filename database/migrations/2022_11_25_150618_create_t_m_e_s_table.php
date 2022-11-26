@@ -13,8 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('r_i_c_s', function (Blueprint $table) {
+        Schema::create('t_m_e_s', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("orga_groups_id")->constrained()->cascadeOnDelete();
+            $table->string("ISSI");
+            $table->string("short");
+            $table->string("long");
+            
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('r_i_c_s');
+        Schema::dropIfExists('t_m_e_s');
     }
 };

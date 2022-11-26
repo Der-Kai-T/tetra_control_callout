@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('t_m_e_s', function (Blueprint $table) {
+        Schema::create('orga_groups', function (Blueprint $table) {
             $table->id();
-            $table->string("ISSI")->unique();
-            $table->string("name_short")->unique();
-            $table->string("name_long");
+            $table->string("name");
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('t_m_e_s');
+        Schema::dropIfExists('orga_groups');
     }
 };
